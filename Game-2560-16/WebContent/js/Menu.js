@@ -5,7 +5,7 @@ function Menu() {
 	Phaser.State.call(this);
 }
 window.onload = function() {
-	var game = new Phaser.Game(640,360, Phaser.AUTO);
+	var game = new Phaser.Game(800,1200, Phaser.AUTO);
 	// Add the States your game has.
 	game.state.add("Boot", Boot);
 	game.state.add("Menu", Menu);
