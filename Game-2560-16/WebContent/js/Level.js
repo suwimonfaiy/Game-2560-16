@@ -18,8 +18,10 @@ Level.prototype.create = function() {
 	this.map = this.game.add.tilemap("lab7");
 	this.map.addTilesetImage('titleset');
 	this.maplayer = this.map.createLayer("Tile Layer 1");
-	this.cat9 = this.addCat(280, 300);
-	this.cat9.play("jamedead");
+	this.maplayer.resizeWorld();
+	this.map.setCollisionBetween(0, 180, true, this.maplayer);
+	this.enemies = this.add.group();
+	
 	
 };
 function gframes(key,n){
@@ -30,18 +32,24 @@ function gframes(key,n){
 	}
 	return f;
 	}
-Level.prototype.addCat = function(x, y) {
-	var c = this.add.sprite(x, y, "jamedead");
-	c.animations.add("jamedead", gframe("jamedead", 10), 12, true);
-	
-	c.play("jamedead");
+Level.prototype.addwitch = function(x, y) {
+	var c = this.add.sprite(x, y, "dead");
+	c.animations.add("Run", gframes("run", 10), 12, true);
+	c.animations.add("Walk", gframes("walk", 10), 12, true);
+	c.animations.add("Dead", gframes("witch", 10), 12, true);
+	c.play("Dead");
 	c.anchor.set(0.5, 1);
-	this.game.physics.enable(c);
-	c.body.collideWorldBounds = true;
 	return c;
 };
 
-
+Level.prototype.addplayer = function(x, y) {
+	var c = this.add.sprite(x, y, "jame");
+	c.animations.add("Walk", gframes("walk", 10), 12, true);
+	c.animations.add("Dead", gframes("dead", 10), 12, true);
+	c.play("Dead");
+	c.anchor.set(0.5, 1);
+	return c;
+};
 
 Level.prototype.quitGame = function() {
 	this.game.state.start("Menu");
