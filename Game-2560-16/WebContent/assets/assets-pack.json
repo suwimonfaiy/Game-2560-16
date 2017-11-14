@@ -8,7 +8,8 @@
     },
     {
       "type": "tilemap",
-      "key": "tilemap"
+      "key": "tilemap",
+      "format": "CSV"
     },
     {
       "type": "tilemap",
@@ -37,6 +38,41 @@
       "key": "bg",
       "url": "assets/tilemap/background.png",
       "overwrite": false
+    },
+    {
+      "type": "atlas",
+      "key": "dead",
+      "textureURL": "assets/atlas/dead.png",
+      "atlasURL": "assets/atlas/dead.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "jamedead",
+      "textureURL": "assets/atlas/jamedead.png",
+      "atlasURL": "assets/atlas/jamedead.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "jamewalk",
+      "textureURL": "assets/atlas/jamewalk.png",
+      "atlasURL": "assets/atlas/jamewalk.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "run",
+      "textureURL": "assets/atlas/run.png",
+      "atlasURL": "assets/atlas/run.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "walk",
+      "textureURL": "assets/atlas/walk.png",
+      "atlasURL": "assets/atlas/walk.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
   "start": [{
@@ -52,7 +88,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510497919550",
+    "generated": "1510680019997",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

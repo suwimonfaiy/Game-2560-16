@@ -1,0 +1,249 @@
+{
+  "frames": {
+    "witch_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 232,
+        "y": 8,
+        "w": 232,
+        "h": 217
+      },
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 30,
+        "w": 232,
+        "h": 217
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 232,
+        "y": 446,
+        "w": 232,
+        "h": 220
+      },
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 27,
+        "w": 232,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_002": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 215,
+        "w": 232,
+        "h": 224
+      },
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 0,
+        "w": 232,
+        "h": 224
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_003": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 439,
+        "w": 232,
+        "h": 227
+      },
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 0,
+        "w": 232,
+        "h": 227
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_004": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 463,
+        "y": 227,
+        "w": 232,
+        "h": 219
+      },
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 27,
+        "w": 232,
+        "h": 219
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_005": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 696,
+        "y": 230,
+        "w": 231,
+        "h": 217
+      },
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 29,
+        "w": 231,
+        "h": 217
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_006": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 696,
+        "y": 16,
+        "w": 232,
+        "h": 214
+      },
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 30,
+        "w": 232,
+        "h": 214
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_007": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 231,
+        "h": 215
+      },
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 30,
+        "w": 231,
+        "h": 215
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_008": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 232,
+        "y": 225,
+        "w": 231,
+        "h": 221
+      },
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 22,
+        "w": 231,
+        "h": 221
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_009": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 696,
+        "y": 447,
+        "w": 231,
+        "h": 219
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 25,
+        "w": 231,
+        "h": 219
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_010": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 464,
+        "y": 446,
+        "w": 232,
+        "h": 220
+      },
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 27,
+        "w": 232,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    },
+    "witch_011": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 464,
+        "y": 9,
+        "w": 232,
+        "h": 218
+      },
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 29,
+        "w": 232,
+        "h": 218
+      },
+      "sourceSize": {
+        "w": 281,
+        "h": 248
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "dead.png"
+  }
+}
