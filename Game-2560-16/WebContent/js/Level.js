@@ -15,16 +15,16 @@ Level.prototype.create = function() {
 	this.bg.width = this.game.width;
 	this.bg.height = this.game.height;
 
-	this.map = this.game.add.tilemap("project2");
-	this.map.addTilesetImage('titleset');
+	this.map = this.game.add.tilemap("game");
+	this.map.addTilesetImage('titlesett');
 	this.maplayer = this.map.createLayer("Tile Layer 1");
 	this.maplayer.resizeWorld();
-	this.map.setCollisionBetween(0, 180, true, this.maplayer);
+	this.map.setCollisionBetween(0, 264, true, this.maplayer);
 	this.enemies = this.add.group();
 	this.witch1 = this.addwitch(280, 300);
 	this.witch1.play("Run");
 	this.jame1 = this.addplayer(250, 500);
-	this.jame1.play("Walk");
+	this.jame1.play("Jump");
 	
 };
 function gframes(key,n){
@@ -49,6 +49,8 @@ Level.prototype.addplayer = function(x, y) {
 	var c = this.add.sprite(x, y, "jame");
 	c.animations.add("Walk", gframes("walk", 10), 12, true);
 	c.animations.add("Dead", gframes("dead", 10), 12, true);
+	c.animations.add("Idle", gframes("idle", 10), 12, true);
+	c.animations.add("Jump", gframes("jump", 10), 12, true);
 	c.play("Dead");
 	c.anchor.set(0.5, 1);
 	return c;
