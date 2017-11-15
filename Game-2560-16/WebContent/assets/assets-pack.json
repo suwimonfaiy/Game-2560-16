@@ -72,12 +72,6 @@
       "overwrite": false
     },
     {
-      "type": "tilemap",
-      "key": "project2",
-      "url": "assets/tilemap/project2..json",
-      "format": "TILED_JSON"
-    },
-    {
       "type": "spritesheet",
       "key": "tilesett",
       "url": "assets/tilemap/tilesheet_complete.png",
@@ -89,8 +83,8 @@
     },
     {
       "type": "tilemap",
-      "key": "game",
-      "url": "assets/tilemap/game.json",
+      "key": "game2",
+      "url": "assets/tilemap/game2.json",
       "format": "TILED_JSON"
     }
   ],
@@ -107,7 +101,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510772608242",
+    "generated": "1510776854078",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

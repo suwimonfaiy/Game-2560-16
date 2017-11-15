@@ -15,16 +15,13 @@ Level.prototype.create = function() {
 	this.bg.width = this.game.width;
 	this.bg.height = this.game.height;
 
-	this.map = this.game.add.tilemap("game");
-	this.map.addTilesetImage('titlesett');
+	this.map = this.game.add.tilemap("game2");
+	this.map.addTilesetImage('tilesett');
 	this.maplayer = this.map.createLayer("Tile Layer 1");
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0, 264, true, this.maplayer);
 	this.enemies = this.add.group();
-	this.witch1 = this.addwitch(280, 300);
-	this.witch1.play("Run");
-	this.jame1 = this.addplayer(250, 500);
-	this.jame1.play("Jump");
+	
 	
 };
 function gframes(key,n){
