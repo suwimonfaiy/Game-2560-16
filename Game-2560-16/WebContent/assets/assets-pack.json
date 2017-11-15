@@ -64,6 +64,12 @@
       "key": "bo",
       "url": "assets/images/platformer_background_1.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "lay",
+      "url": "assets/images/lay.png",
+      "overwrite": false
     }
   ],
   "start": [{
@@ -79,7 +85,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510761608577",
+    "generated": "1510761909866",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
