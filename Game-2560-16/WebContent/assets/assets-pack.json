@@ -70,6 +70,12 @@
       "key": "lay",
       "url": "assets/images/lay.png",
       "overwrite": false
+    },
+    {
+      "type": "tilemap",
+      "key": "project2",
+      "url": "assets/tilemap/project2..json",
+      "format": "TILED_JSON"
     }
   ],
   "start": [{
@@ -85,7 +91,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510761909866",
+    "generated": "1510768597606",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
