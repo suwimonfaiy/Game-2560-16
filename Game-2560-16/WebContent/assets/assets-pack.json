@@ -52,6 +52,12 @@
       "textureURL": "assets/atlas/jame.png",
       "atlasURL": "assets/atlas/jame.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "3",
+      "url": "assets/images/3.png",
+      "overwrite": false
     }
   ],
   "start": [{
@@ -67,7 +73,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510683669076",
+    "generated": "1510761016723",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

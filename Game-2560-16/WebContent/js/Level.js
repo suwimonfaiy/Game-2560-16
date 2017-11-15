@@ -10,7 +10,7 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 Level.prototype.create = function() {
-	this.bg = this.game.add.sprite(0, 0, "bg");
+	this.bg = this.game.add.sprite(0, 0, "3");
 	this.bg.fixedToCamera = true;
 	this.bg.width = this.game.width;
 	this.bg.height = this.game.height;
@@ -21,7 +21,8 @@ Level.prototype.create = function() {
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0, 180, true, this.maplayer);
 	this.enemies = this.add.group();
-	
+	this.witch1 = this.addwitch(280, 300);
+	this.witch1.play("Run");
 	
 };
 function gframes(key,n){
