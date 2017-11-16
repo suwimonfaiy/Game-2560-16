@@ -86,6 +86,34 @@
       "key": "game2",
       "url": "assets/tilemap/game2.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "game",
+      "url": "assets/tilemap/game.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "game4",
+      "url": "assets/tilemap/game4.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "spritesheet",
+      "key": "st",
+      "url": "assets/tilemap/tilesheet_complete.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "tilemap",
+      "key": "ggame",
+      "url": "assets/tilemap/ggame.json",
+      "format": "TILED_JSON"
     }
   ],
   "start": [{
@@ -101,7 +129,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510776854078",
+    "generated": "1510815905872",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
