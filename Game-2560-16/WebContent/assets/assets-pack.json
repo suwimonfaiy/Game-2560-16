@@ -150,8 +150,20 @@
     },
     {
       "type": "image",
-      "key": "start",
+      "key": "startt",
       "url": "assets/images/start.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "about",
+      "url": "assets/images/about.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "exit",
+      "url": "assets/images/exit.png",
       "overwrite": false
     }
   ],
@@ -162,7 +174,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510851599764",
+    "generated": "1510852410177",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
