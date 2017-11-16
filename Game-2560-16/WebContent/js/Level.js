@@ -10,6 +10,8 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 Level.prototype.create = function() {
+   this.game.physics.startSystem(Phaser.Physics.ARCADE);
+	this.game.physics.arcade.gravity.y = 1000;
 	this.bg = this.game.add.sprite(0, 0, "lay");
 	this.bg.fixedToCamera = true;
 	this.bg.width = this.game.width;
@@ -40,6 +42,55 @@ Level.prototype.create = function() {
 		}
 	}
 	
+	
+};
+Level.prototype.update = function() {
+  if(this.player == null) return;
+	this.game.physics.arcade.collide(this.player, this.maplayer);
+	this.game.physics.arcade.collide(this.enemies, this.maplayer);
+	if(this.player.body.velocity.y==0){
+		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+			this.player.body.acceleration.x = -100;
+			this.player.play("Walk");
+			this.player.scale.x = -1;
+			this.player.scale.set(0.3);
+			this.player.body.drag.setTo(500, 0);
+		} else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+			this.player.body.velocity.x = 100;
+			this.player.play("Walk");
+			this.player.scale.x = 1;
+			this.player.scale.set(0.3);
+			this.player.body.drag.setTo(500, 0);
+		} else {
+			this.player.body.velocity.x = 0;
+			this.player.play("Idle");
+			this.player.scale.set(0.3);
+			
+		}
+		
+		if (this.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+			this.player.body.velocity.y = -700;
+			this.player.body.velocity.x = 1;
+			this.player.play("Jump");
+			this.player.scale.set(0.3);
+			this.player.body.drag.setTo(0, 0);
+			if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+				this.player.body.velocity.x = -150;
+				this.player.play("Walk");
+				this.player.scale.x = -1;
+				this.player.scale.set(0.3);
+				
+				
+			} else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+				this.player.body.velocity.x = 150;
+				this.player.play("Walk");
+				this.player.scale.x = 1;
+				this.player.scale.set(0.3);
+				this.player.body.drag.setTo(0, 0);
+			}
+		}
+		
+	}
 };
 function gframes(key,n){
 	var f=[ ];
@@ -65,6 +116,8 @@ Level.prototype.addwitch = function(x, y) {
 	c.play("Walk");
 	c.scale.set(0.5);
 	c.anchor.set(0,0.9);
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
 	return c;
 };
 
@@ -75,9 +128,12 @@ Level.prototype.addplayer = function(x, y) {
 	c.animations.add("Idle", gframes("idle", 10), 12, true);
 	c.animations.add("Jump", gframes("jump", 10), 12, true);
 	c.play("Idle");
-	c.scale.set(0.3);
 	c.anchor.set(0.5, 1);
-	
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
+	c.body.drag.setTo(500, 0);
+	//c.body.setSize(10,5,0.5,0);
+	c.scale.set(0.3);
 	return c;
 };
 
@@ -91,6 +147,8 @@ Level.prototype.addenemy1 = function(x, y) {
 	c.animations.add("walk", gframe("enemyWalking", 10), 4, true);
 	c.play("idle");
 	c.anchor.set(0,0.9);
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
 	return c;
 };
 Level.prototype.quitGame = function() {

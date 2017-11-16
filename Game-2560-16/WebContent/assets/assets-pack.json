@@ -138,8 +138,20 @@
     },
     {
       "type": "image",
-      "key": "boniatillo",
-      "url": "assets/images/boniatillo.png",
+      "key": "bgg",
+      "url": "assets/images/menu.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "name",
+      "url": "assets/images/jamerun2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "start",
+      "url": "assets/images/start.png",
       "overwrite": false
     }
   ],
@@ -150,7 +162,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510827672479",
+    "generated": "1510851599764",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

@@ -14,10 +14,19 @@ Menu.prototype.preload = function() {
 };
 
 Menu.prototype.create = function() {
-
+	this.bg = this.game.add.sprite(0, 0, "bgg");
+	this.bg.width = this.game.width;
+	this.bg.height = this.game.height;
+	
+	var logo = this.add.sprite(this.world.centerX,250,"name");
+	logo.width = 600;
+	logo.anchor.set(0.5,0.5);
+	
+	
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
-			"tap-to-start");
+	"start");
 	sprite.anchor.set(0.5, 0.5);
+	
 	this.input.onDown.add(this.startGame, this);
 };
 
