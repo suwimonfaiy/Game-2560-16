@@ -25,7 +25,7 @@
     },
     {
       "type": "spritesheet",
-      "key": "titleset",
+      "key": "titlesett",
       "url": "assets/tilemap/titleset.png",
       "frameWidth": 35,
       "frameHeight": 35,
@@ -73,7 +73,7 @@
     },
     {
       "type": "spritesheet",
-      "key": "tilesett",
+      "key": "tileset",
       "url": "assets/tilemap/tilesheet_complete.png",
       "frameWidth": 64,
       "frameHeight": 64,
@@ -114,14 +114,35 @@
       "key": "ggame",
       "url": "assets/tilemap/ggame.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "test",
+      "url": "assets/tilemap/test.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "atlas",
+      "key": "enamie",
+      "textureURL": "assets/atlas/enamie.png",
+      "atlasURL": "assets/atlas/enamie.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
-  "start": [{
-    "type": "image",
-    "key": "tap-to-start",
-    "url": "assets/images/tap-to-start.png",
-    "overwrite": false
-  }],
+  "start": [
+    {
+      "type": "image",
+      "key": "tap-to-start",
+      "url": "assets/images/tap-to-start.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "boniatillo",
+      "url": "assets/images/boniatillo.png",
+      "overwrite": false
+    }
+  ],
   "preload": [{
     "type": "image",
     "key": "loading",
@@ -129,7 +150,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510815905872",
+    "generated": "1510827672479",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

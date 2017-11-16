@@ -1,0 +1,489 @@
+{
+  "frames": {
+    "enemyFloating_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 81,
+        "y": 41,
+        "w": 42,
+        "h": 40
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 42,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 42,
+        "h": 40
+      }
+    },
+    "enemyFloating_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 93,
+        "w": 55,
+        "h": 55
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 55,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 55,
+        "h": 55
+      }
+    },
+    "enemyFloating_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 95,
+        "y": 1,
+        "w": 40,
+        "h": 40
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 40
+      }
+    },
+    "enemyFloating_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 123,
+        "y": 45,
+        "w": 42,
+        "h": 40
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 42,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 42,
+        "h": 40
+      }
+    },
+    "enemyFlyingAlt_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 247,
+        "y": 112,
+        "w": 52,
+        "h": 36
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 52,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 52,
+        "h": 36
+      }
+    },
+    "enemyFlyingAlt_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 55,
+        "y": 81,
+        "w": 63,
+        "h": 24
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 63,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 63,
+        "h": 24
+      }
+    },
+    "enemyFlyingAlt_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 179,
+        "y": 81,
+        "w": 52,
+        "h": 29
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 52,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 52,
+        "h": 29
+      }
+    },
+    "enemyFlyingAlt_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 60,
+        "h": 29
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 60,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 60,
+        "h": 29
+      }
+    },
+    "enemyFlying_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 119,
+        "y": 110,
+        "w": 64,
+        "h": 38
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 38
+      }
+    },
+    "enemyFlying_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 183,
+        "y": 110,
+        "w": 64,
+        "h": 38
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 38
+      }
+    },
+    "enemyFlying_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 55,
+        "y": 105,
+        "w": 64,
+        "h": 43
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 43
+      }
+    },
+    "enemyFlying_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 119,
+        "y": 85,
+        "w": 60,
+        "h": 25
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 60,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 60,
+        "h": 25
+      }
+    },
+    "enemySpikey_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 243,
+        "y": 8,
+        "w": 32,
+        "h": 40
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 40
+      }
+    },
+    "enemySpikey_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 211,
+        "y": 11,
+        "w": 32,
+        "h": 28
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 28
+      }
+    },
+    "enemySpikey_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 29,
+        "w": 32,
+        "h": 64
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "enemySpikey_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 275,
+        "y": 8,
+        "w": 32,
+        "h": 40
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 40
+      }
+    },
+    "enemySwimming_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 167,
+        "y": 17,
+        "w": 44,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 44,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 44,
+        "h": 32
+      }
+    },
+    "enemySwimming_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 247,
+        "y": 80,
+        "w": 44,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 44,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 44,
+        "h": 32
+      }
+    },
+    "enemySwimming_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 165,
+        "y": 49,
+        "w": 46,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 46,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 46,
+        "h": 32
+      }
+    },
+    "enemySwimming_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 243,
+        "y": 48,
+        "w": 44,
+        "h": 32
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 44,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 44,
+        "h": 32
+      }
+    },
+    "enemyWalking_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 135,
+        "y": 1,
+        "w": 32,
+        "h": 44
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 44
+      }
+    },
+    "enemyWalking_2": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 211,
+        "y": 39,
+        "w": 32,
+        "h": 42
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 42
+      }
+    },
+    "enemyWalking_3": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 32,
+        "y": 43,
+        "w": 49,
+        "h": 38
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 49,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 49,
+        "h": 38
+      }
+    },
+    "enemyWalking_4": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 60,
+        "y": 0,
+        "w": 35,
+        "h": 41
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 35,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 35,
+        "h": 41
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "enamie.png"
+  }
+}
