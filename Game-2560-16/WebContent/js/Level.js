@@ -24,6 +24,7 @@ Level.prototype.create = function() {
 	this.maplayer = this.map.createLayer("Tile Layer 1");
 	this.maplayer.resizeWorld();
 	this.maplayer.wrap = true;
+	//this.game.time.events.add(Phaser.Timer.SECOND * 30, this.die, this);
 	this.map.setCollisionBetween(0, 264, true, this.maplayer);
 	this.enemies = this.add.group();
 	this.goal = this.add.group();
@@ -106,7 +107,7 @@ Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.goal, this.maplayer);
 	this.physics.arcade.collide(this.player,this.enemies,this.onPlayerCollide,null,this);
 	this.game.physics.arcade.overlap(this.player, this.enemies, this.collectCoin, null, this);
-	this.player.body.velocity.x = 0;
+	//this.player.body.velocity.x = 0;
 		if (this.cursors.left.isDown) {
 			
 			this.player.body.acceleration.x = -200;
@@ -163,7 +164,7 @@ Level.prototype.update = function() {
 				 delay = this.add.tween(win);
 				 delay.to({y:100},1000, "Linear",true,2000); 
 				 tw.chain(delay);
-				 delay.onComplete.addOnce(this.quitGame, this);
+				 delay.onComplete.addOnce(this.Next, this);
 			}
 			Level.prototype.onCollide = function(enemies,bullet){
 				enemies.kill();

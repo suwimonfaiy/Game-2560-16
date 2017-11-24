@@ -257,6 +257,12 @@
       "key": "gameover1",
       "url": "assets/images/gameover1.png",
       "overwrite": false
+    },
+    {
+      "type": "tilemap",
+      "key": "test3",
+      "url": "assets/tilemap/test3.json",
+      "format": "TILED_JSON"
     }
   ],
   "start": [
@@ -328,7 +334,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1511497695459",
+    "generated": "1511499378595",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

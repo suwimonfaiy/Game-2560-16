@@ -13,9 +13,8 @@ Gameover.prototype.preload = function() {
 };
 
 Gameover.prototype.create = function() {
-	this.musicStory = this.add.sound("POL",0.5);
-	this.musicStory.loop =  false;
-	this.musicStory.play();
+	this.musicStory = this.add.audio("dead",0.5);
+	 this.musicStory.allowMultiple=true;
 	
 	this.bg = this.game.add.sprite(0, 0, "gameover1");
 	this.bg.width = this.game.width;
