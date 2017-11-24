@@ -127,6 +127,136 @@
       "textureURL": "assets/atlas/enamie.png",
       "atlasURL": "assets/atlas/enamie.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "back",
+      "url": "assets/images/back.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "coin",
+      "url": "assets/images/coins.png",
+      "frameWidth": 40,
+      "frameHeight": 44,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "audio",
+      "key": "POL-smiley-island-short",
+      "urls": ["assets/audio/POL-smiley-island-short.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Win",
+      "urls": ["assets/audio/Win.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "bowshot",
+      "urls": ["assets/audio/bowshot.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "dead1",
+      "urls": ["assets/audio/dead.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "POL",
+      "urls": ["assets/audio/POL-smiley-island-short (online-audio-converter.com).mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Win",
+      "urls": ["assets/audio/Win (online-audio-converter.com).mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "dead ",
+      "urls": ["assets/audio/dead (online-audio-converter.com).mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "image",
+      "key": "arrow",
+      "url": "assets/images/arrow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "arch",
+      "url": "assets/images/arch.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "boom",
+      "url": "assets/images/comic-boom-explosion-2-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gameover",
+      "url": "assets/images/gameover.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "win",
+      "url": "assets/images/Winner-PNG-File.png",
+      "overwrite": false
+    },
+    {
+      "type": "video",
+      "key": "GameLow",
+      "urls": ["assets/video/GameLow.mp4"],
+      "asBlob": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "a",
+      "url": "assets/images/fluidGreen_top.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "atlas",
+      "key": "jame2",
+      "textureURL": "assets/atlas/jame2.png",
+      "atlasURL": "assets/atlas/jame2.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "jame3",
+      "textureURL": "assets/atlas/jame1.png",
+      "atlasURL": "assets/atlas/jame1.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "back1",
+      "url": "assets/images/back1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gameover1",
+      "url": "assets/images/gameover1.png",
+      "overwrite": false
     }
   ],
   "start": [
@@ -165,6 +295,30 @@
       "key": "exit",
       "url": "assets/images/exit.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "story",
+      "url": "assets/images/story.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "back1",
+      "url": "assets/images/back1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "about1",
+      "url": "assets/images/about (2).png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "cave",
+      "url": "assets/images/Travel-Cave-icon.png",
+      "overwrite": false
     }
   ],
   "preload": [{
@@ -174,7 +328,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510852410177",
+    "generated": "1511497695459",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

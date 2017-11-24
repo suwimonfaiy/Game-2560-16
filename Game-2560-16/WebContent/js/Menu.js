@@ -19,25 +19,46 @@ Menu.prototype.create = function() {
 	this.bg.height = this.game.height;
 	
 	var logo = this.add.sprite(this.world.centerX,250,"name");
-	logo.anchor.set(0.5,1.5);
+	logo.anchor.set(0.5,1);
 	
-	
+
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"startt");
-	sprite.anchor.set(0.5, 0.5);
-	this.input.onDown.add(this.startGame, this);
+	sprite.anchor.set(0.5, 1);
+	
+	var sprite2 = this.add.sprite(this.world.centerX, this.world.centerY,
+	"story");
+	sprite2.anchor.set(0.5, 0);
 	
 	var sprite1 = this.add.sprite(this.world.centerX, this.world.centerY,
 	"about");
-	sprite1.anchor.set(0.5, -1);
-	var sprite2 = this.add.sprite(this.world.centerX, this.world.centerY,
-	"exit");
-	sprite2.anchor.set(0.5, -2);
+	sprite1.anchor.set(0.5, -1.5);
+
+	sprite.inputEnabled = true;
+	sprite1.inputEnabled = true;
+	sprite2.inputEnabled = true;
 	
+	sprite.events.onInputDown.add(this.startLevel, this);
+	sprite1.events.onInputDown.add(this.startAbout, this);
+	sprite2.events.onInputDown.add(this.startstory, this);
 	
 	
 };
 
-Menu.prototype.startGame = function() {
-	this.game.state.start("Level");
+Menu.prototype.startAbout = function() {
+	this.game.state.start("About");
+	/*this.music = this.add.sound("plan1",0.5);
+	this.music.play();*/
 };
+
+Menu.prototype.startLevel = function(){
+	/*this.mus.stop();
+	this.music.stop();*/
+	this.game.state.start("Level");
+	};
+
+	Menu.prototype.startstory = function(){
+		/*this.mus.stop();
+		this.music.stop();*/
+		this.game.state.start("Story");
+		};

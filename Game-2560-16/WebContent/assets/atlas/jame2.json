@@ -1,0 +1,209 @@
+{
+  "frames": {
+    "jamedead_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 280,
+        "y": 97,
+        "w": 80,
+        "h": 96
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 80,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 280,
+        "y": 0,
+        "w": 78,
+        "h": 97
+      },
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 11,
+        "w": 78,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_002": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 5,
+        "w": 81,
+        "h": 96
+      },
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 13,
+        "w": 81,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_003": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 0,
+        "y": 101,
+        "w": 89,
+        "h": 92
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 16,
+        "w": 89,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_004": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 89,
+        "y": 107,
+        "w": 94,
+        "h": 86
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 19,
+        "w": 94,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_005": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 183,
+        "y": 35,
+        "w": 97,
+        "h": 78
+      },
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 23,
+        "w": 97,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_006": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 81,
+        "y": 21,
+        "w": 96,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 0,
+        "w": 96,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_007": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 183,
+        "y": 113,
+        "w": 97,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 0,
+        "w": 97,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_009": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 183,
+        "y": 113,
+        "w": 97,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 0,
+        "w": 97,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    },
+    "jamedead_008": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 183,
+        "y": 113,
+        "w": 97,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 0,
+        "w": 97,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 141,
+        "h": 112
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "jame2.png"
+  }
+}
