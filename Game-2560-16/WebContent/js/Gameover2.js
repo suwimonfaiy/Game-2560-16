@@ -1,18 +1,18 @@
 /**
  *
  */
-function Gameover() {
+function Gameover2() {
 	Phaser.State.call(this);
 }
 
 var proto = Object.create(Phaser.State);
-Gameover.prototype = proto;
+Gameover2.prototype = proto;
 
-Gameover.prototype.preload = function() {
+Gameover2.prototype.preload = function() {
 	this.load.pack("level", "assets/assets-pack.json");
 };
 
-Gameover.prototype.create = function() {
+Gameover2.prototype.create = function() {
 	this.musicStory = this.add.sound("dead1",0.5);
 	this.musicStory .play();
 	
@@ -26,9 +26,7 @@ Gameover.prototype.create = function() {
 	this.bg.events.onInputDown.add(this.backmenu, this);
 };
 
-Gameover.prototype.backmenu = function() {
-	this.game.state.start("Level");
+Gameover2.prototype.backmenu = function() {
+	this.game.state.start("level2");
 	this.musicStory.stop();
 };
-
-

@@ -10,10 +10,9 @@ var proto = Object.create(Phaser.State);
 Level.prototype = proto;
 
 Level.prototype.create = function() {
-	 this.game.score = 0;
-	 this.gameover=false;	
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
+	this.game.score = 0;
 	this.bg = this.game.add.sprite(0, 0, "lay");
 	this.bg.fixedToCamera = true;
 	this.bg.width = this.game.width;
@@ -24,11 +23,12 @@ Level.prototype.create = function() {
 	this.maplayer = this.map.createLayer("Tile Layer 1");
 	this.maplayer.resizeWorld();
 	this.maplayer.wrap = true;
-	//this.game.time.events.add(Phaser.Timer.SECOND * 30, this.die, this);
+	
 	this.map.setCollisionBetween(0, 264, true, this.maplayer);
 	this.enemies = this.add.group();
 	this.goal = this.add.group();
 	this.enemies2 = this.add.group();
+	this.enemies3 = this.add.group();
 	for (x in this.map.objects.object) {
 		var obj = this.map.objects.object[x];
 		if (obj.type == "player") {
@@ -41,25 +41,27 @@ Level.prototype.create = function() {
 			var c = this.addenemy1(obj.x, obj.y);
 			this.enemies.add(c);
 		} else if (obj.type == "enemy2") {
-			this.coins = this.game.add.sprite(obj.x, obj.y, "coin"); 
-			this.coins.anchor.set(0.5,0.5);
-			this.coins.animations.add("fly");
-			this.coins.play("fly",4,true);
+			var c = this.addcoin(obj.x, obj.y);
+			this.enemies2.add(c);
 		}else if (obj.type == "enemy3") {
 			var c = this.addwitch(obj.x, obj.y);
 			this.enemies.add(c);
 		}else if (obj.type == "goal") {
-			this.cave = this.game.add.sprite(obj.x, obj.y, "cave"); 
-			this.cave.anchor.set(0.5,0.5);
-			this.cave.scale.set(0.5,0.5);
+			var c = this.addpole(obj.x, obj.y);
+			this.goal.add(c);
+		
+		}else if (obj.type == "enemy4") {
+			var c = this.addwater(obj.x, obj.y);
+			this.enemies3.add(c);
 		
 		}
 	}
 	 this.createWeapon();
-	 this.player.maxHealth = 6;
-	 this.player.setHealth(3);
-	 this.scoreText = this.add.text(32, 0, ''+this.game.score, { fill: 'Pink' });
-	 this.scoreText.z = 10;
+	 this.player.maxHealth = 3;
+	 this.player.setHealth(1);
+	 this.scoreText = this.add.text(this.game.camera.width/2.5, 0, 'Score :'+this.game.score, { font: '50px Arial',fill: 'white' });
+	 this.scoreText.fixedToCamera = true;
+	 this.game.time.events.add(Phaser.Timer.SECOND * 60, this.onPlayerKilled, this);
 	 this.player.events.onKilled.addOnce(this.onPlayerKilled,this);
 	 this.player.canhit = true;
 	 this.physics.enable(this.player, Phaser.Physics.ARCADE);
@@ -68,11 +70,11 @@ Level.prototype.create = function() {
 	 this.cursors = this.input.keyboard.createCursorKeys();
 	 this.player.inputEnabled = true;
 	 this.player.events.onInputDown.add(this.fireWeapon, this); 
-	 this.music = this.add.sound("POL",0.5);
+	 this.music = this.add.sound("pol1",0.5);
 	 this.music.loop =  true;
 	 this.music.play();
-	 this.boom = this.add.audio("boeshot",0.2);
-	 this.boom.allowMultiple=true;
+	this.boom = this.add.sound("bowshot1",0.5);
+	
 };
 
 
@@ -88,27 +90,30 @@ Level.prototype.onPlayerCollide = function(player,enamies){
 	return true;
 };
 
+
+
+
 Level.prototype.onPlayerKilled = function(){
 	this.music.stop();
 	this.game.state.start("Gameover");
 		
 };
-Level.prototype.Next = function(player,goal){ 
-	this.music.stop();
-	this.game.state.start("map");
-	
-}
 
 Level.prototype.update = function() {
 	if(this.gameover) return;
 	if(this.player == null) return;
 	this.game.physics.arcade.collide(this.player, this.maplayer);
 	this.game.physics.arcade.collide(this.enemies, this.maplayer);
+	this.game.physics.arcade.collide(this.enemies2, this.maplayer);
+	this.game.physics.arcade.collide(this.enemies3, this.maplayer);
 	this.game.physics.arcade.collide(this.goal, this.maplayer);
 	this.physics.arcade.collide(this.player,this.enemies,this.onPlayerCollide,null,this);
-	this.game.physics.arcade.overlap(this.player, this.enemies, this.collectCoin, null, this);
-	//this.player.body.velocity.x = 0;
-		if (this.cursors.left.isDown) {
+	this.physics.arcade.collide(this.player,this.enemies3,this.onPlayerKilled,null,this);
+	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
+	this.game.physics.arcade.overlap(this.player, this.enemies2, this.collectCoin, null, this);
+	this.game.debug.text("Time : " + this.game.time.events.duration/1000, 50, 50);
+	
+	if (this.cursors.left.isDown) {
 			
 			this.player.body.acceleration.x = -200;
 			this.player.play("Walk");
@@ -139,56 +144,56 @@ Level.prototype.update = function() {
 			}
 			
 			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+				this.player.play("Attack");
 				 this.fireWeapon();
+				 this.boom.play();
 				 }
 			this.enemies.forEachAlive(function(a){
 				if(a.y > this.world.height) a.y = -Math.random() * 300;
 	},this);
 			this.physics.arcade.collide(this.enemies,this.weapon1.bullets,this.onCollide,null,this);
-						this.physics.arcade.collide(this.goal.coin,this.player,this.collectCoin,null,this);
+			this.physics.arcade.collide(this.enemies,this.weapon.bullets,this.onCollide,null,this);
+			
 			if(this.player.canhit){
 				 this.physics.arcade.collide(this.enemies,this.player,this.onPlayerCollide,null,this);
-				 this.physics.arcade.collide(this.goal,this.player,this.collectCoin,null,this);
+				 
 			}
 			
-			if(this.enemies.countLiving()==0 ){
-				 this.gameover=true;
-				 this.win1 = this.add.audio("Win",0.2);
-				 this.win1.allowMultiple=true;
-				 win = this.add.sprite(this.world.centerX,this.world.centerY,"win");
-				 win.anchor.set(0.5,0.5);
-				 win.scale.set(0.1);
-				 var tw = this.add.tween(win.scale);
-				 tw.to({x:0.5,y:0.5},1000, "Linear",true,0);
-
-				 delay = this.add.tween(win);
-				 delay.to({y:100},1000, "Linear",true,2000); 
-				 tw.chain(delay);
-				 delay.onComplete.addOnce(this.Next, this);
-			}
 			Level.prototype.onCollide = function(enemies,bullet){
 				enemies.kill();
 				bullet.kill();
 				this.game.score+=100;
-				this.scoreText.text = ''+this.game.score;
+				this.scoreText.text = 'Score :'+this.game.score;
 				exp = this.add.sprite(enemies.x, enemies.y,"boom");
 				exp.anchor.set(0.5);
 				exp.scale.set(0.05);
 				exp.animations.add("all",null,12,false).play().killOnComplete=true;
 				this.boom.play();
 			}
-			Level.prototype.collectCoin  = function (player, coins) {
-				player.kill();
-				coins.kill();
+			Level.prototype.collectCoin  = function (player, enemies2) {
+				enemies2.destroy();
 			    this.game.score++;
 			    this.scoreText.text = 'Score :'+this.game.score;
+			    this.addScoreText(enemies2);
 			    return true;
 			  }
 };
 
+Level.prototype.addScoreText = function(enemies2) {
 
+    //score text
+    addScore = this.add.text(enemies2.x, enemies2.y, '+1 ', {
+        fill: 'black'
+    });
+    delay = this.add.tween(addScore);
+    delay.to({
+        y: enemies2.y - 20
+    }, 500, "Linear", true, 500);
+    delay.onComplete.add(function(addScore) {
+        addScore.kill();
+    }, this);
 
-
+};
 
 function gframes(key,n){
 	var f=[ ];
@@ -229,8 +234,6 @@ Level.prototype.addplayer = function(x, y) {
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;
 	c.body.drag.setTo(500, 0);
-	//c.body.setSize(40, 80, 10, 15);
-	//c.scale.set(0.3);
 	return c;
 };
 
@@ -269,18 +272,52 @@ Level.prototype.addwater = function(x, y) {
 	return c;
 };
 
+
+Level.prototype.addcoin = function(x, y) {
+	c = this.add.sprite(x, y, "coin");
+	c.anchor.set(0,0.9);
+	c.animations.add("fly");
+	c.play("fly",4,true);
+	c.smoothed = false;
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
+	return c;
+};
+
+Level.prototype.addpole = function(x, y) {
+	c = this.add.sprite(x, y, "pole");
+	c.anchor.set(0,0.9);
+	c.animations.add("fly");
+	c.play("fly",2,true);
+	c.smoothed = false;
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
+	c.scale.set(1);
+	return c;
+};
+
+
+
 Level.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(2,"arch",1);
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon1.trackSprite(this.player,-5,50);
-	this.weapon1.bulletSpeed = 500;
-	this.weapon1.fireAngle = 0;
+	this.weapon1.trackSprite(this.player,-50,-60);
+	this.weapon1.bulletSpeed = 2000;
+	this.weapon1.fireAngle = -2;
 	this.weapon1.rate = 600;
+	
+	this.weapon = this.add.weapon(2,"arch",1);
+	this.weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
+	this.weapon.trackSprite(this.player,-50,60);
+	this.weapon.bulletSpeed = 2000;
+	this.weapon.fireAngle = 0;
+	this.weapon.rate = 600;
 
 };
 Level.prototype.fireWeapon = function(){
 	 this.weapon1.fire();
-	
+	// this.weapon.fire();
+		
 	
 };
 
@@ -292,6 +329,5 @@ Level.prototype.Next = function(player,goal){
 }
 
 Level.prototype.quitGame = function() {
-	
-	this.game.state.start("Menu");
+		this.game.state.start("Menu");
 };

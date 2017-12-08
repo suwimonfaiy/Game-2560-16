@@ -263,6 +263,126 @@
       "key": "test3",
       "url": "assets/tilemap/test3.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "image",
+      "key": "Story1",
+      "url": "assets/images/1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story2",
+      "url": "assets/images/2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story3",
+      "url": "assets/images/3.1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story4",
+      "url": "assets/images/4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story5",
+      "url": "assets/images/5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story6",
+      "url": "assets/images/6.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story7",
+      "url": "assets/images/7.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story8",
+      "url": "assets/images/8.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "how",
+      "url": "assets/images/howtoplay.jpg",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Story0",
+      "url": "assets/images/0.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "pole",
+      "url": "assets/images/New Piskel.png",
+      "frameWidth": 100,
+      "frameHeight": 100,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "b",
+      "url": "assets/images/fluidRed_top.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "atlas",
+      "key": "tiw",
+      "textureURL": "assets/atlas/tiw.png",
+      "atlasURL": "assets/atlas/tiw.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "audio",
+      "key": "pol1",
+      "urls": [
+        "assets/audio/POL-smiley-island-short (online-audio-converter.com).mp3",
+        "assets/audio/POL-smiley-island-short (online-audio-converter.com).ogg"
+      ],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "win1",
+      "urls": [
+        "assets/audio/Win (online-audio-converter.com).ogg",
+        "assets/audio/Win (online-audio-converter.com).mp3"
+      ],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "bowshot1",
+      "urls": ["assets/audio/bowshot (online-audio-converter.com).ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "dead1",
+      "urls": [
+        "assets/audio/dead (online-audio-converter.com).mp3",
+        "assets/audio/dead (online-audio-converter.com).ogg"
+      ],
+      "autoDecode": true
     }
   ],
   "start": [
@@ -325,6 +445,36 @@
       "key": "cave",
       "url": "assets/images/Travel-Cave-icon.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "jam",
+      "url": "assets/images/jam.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "jam2",
+      "url": "assets/images/jam2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "back2",
+      "url": "assets/images/back2.png",
+      "overwrite": false
+    },
+    {
+      "type": "audio",
+      "key": "pol",
+      "urls": ["assets/audio/POL-smiley-island-short (online-audio-converter.com).ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "button",
+      "urls": ["assets/audio/bowshot (online-audio-converter.com).ogg"],
+      "autoDecode": true
     }
   ],
   "preload": [{
@@ -334,7 +484,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1511499378595",
+    "generated": "1511878566837",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

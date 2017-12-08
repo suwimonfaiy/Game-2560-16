@@ -13,6 +13,7 @@ window.onload = function() {
 	game.state.add("Story",Story);
 	game.state.add("About", About);
 	game.state.add("Gameover", Gameover);
+	game.state.add("winner", winner);
 	
 
 	// Now start the Boot state.
