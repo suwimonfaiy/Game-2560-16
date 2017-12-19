@@ -407,6 +407,24 @@
       "key": "ded",
       "urls": ["assets/audio/Die.wav"],
       "autoDecode": true
+    },
+    {
+      "type": "image",
+      "key": "next",
+      "url": "assets/images/next.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "backstory",
+      "url": "assets/images/backstory.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "start",
+      "url": "assets/images/statgame.png",
+      "overwrite": false
     }
   ],
   "start": [
@@ -508,7 +526,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513698525879",
+    "generated": "1513707206027",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
