@@ -14,7 +14,7 @@ window.onload = function() {
 	game.state.add("About", About);
 	game.state.add("Gameover", Gameover);
 	game.state.add("winner", winner);
-	
+	game.state.add("Gameover2", Gameover2);
 
 	// Now start the Boot state.
 	game.state.start("Boot");

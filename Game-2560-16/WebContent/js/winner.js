@@ -14,19 +14,19 @@ winner.prototype.preload = function() {
 
 winner.prototype.create = function() {
 	this.musicStory = this.add.sound("win1",0.5);
+	this.musicStory.play();
 	this.bg = this.game.add.sprite(0, 0, "win");
 	this.bg.width = this.game.width;
 	this.bg.height = this.game.height;
 	var twn = this.add.tween(this.bg);
 	twn.to({x:0.5,y:0.5}, 7000, "Quad.easeInOut", true,0);
-	this.musicStory.play();
+	
 	this.bg.inputEnabled = true;
 	this.bg.events.onInputDown.add(this.backmenu, this);
 	
 	
 };
 winner.prototype.backmenu = function() {
-	this.musicStory.stop();
 	this.game.state.start("Menu");
-	
+	this.musicStory.stop();
 };

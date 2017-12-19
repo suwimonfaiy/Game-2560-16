@@ -335,7 +335,3 @@ Level.prototype.Next = function(player,goal){
 	
 }
 
-Level.prototype.quitGame = function() {
-	   this.music.stop();
-		this.game.state.start("Menu");
-};

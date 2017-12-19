@@ -21,7 +21,8 @@ Preload.prototype.preload = function() {
 	// Here we load the rest of the assets our game needs.
 	this.load.pack("start", "assets/assets-pack.json");
 	this.load.pack("level", "assets/assets-pack.json");
-	this.load.pack("level2", "assets/assets-pack.json");
+	
+	
 	
 };
 

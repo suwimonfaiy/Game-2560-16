@@ -104,11 +104,6 @@ level2.prototype.onPlayerKilled = function(){
 	this.game.state.start("Gameover2");
 };
 
-level2.prototype.Next = function(player,goal){ 
-	this.music.stop();
-	this.game.state.start("Menu");
-	
-}
 
 level2.prototype.update = function() {
 	if(this.gameover) return;
@@ -118,9 +113,9 @@ level2.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemies2, this.maplayer);
 	this.game.physics.arcade.collide(this.enemies3, this.maplayer);
 	this.game.physics.arcade.collide(this.sis, this.maplayer);
-	this.physics.arcade.collide(this.player,this.enemies,this.onPlayerKilled,null,this);
+	this.physics.arcade.collide(this.player,this.enemies,this.onPlayerCollide,null,this);
 	this.physics.arcade.collide(this.player,this.enemie2,this.onPlayerCollide1,null,this);
-	this.physics.arcade.collide(this.player,this.enemie3,this.onPlayerKilled,null,this);
+	this.physics.arcade.collide(this.player,this.enemies3,this.onPlayerKilled,null,this);
 	this.physics.arcade.collide(this.player,this.sis,this.Next,null,this);
 	this.game.debug.text("Time : " + this.game.time.events.duration/1000, 32, 32);
 	
@@ -186,9 +181,6 @@ level2.prototype.update = function() {
 			
 		
 };
-
-
-
 
 
 level2.prototype.Next = function(player,goal){ 
@@ -311,8 +303,4 @@ level2.prototype.fireWeapon = function(){
 	 this.weapon1.fire();
 	
 	
-};
-
-level2.prototype.quitGame = function() {
-	this.game.state.start("Menu");
 };
