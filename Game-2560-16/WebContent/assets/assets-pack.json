@@ -383,6 +383,30 @@
         "assets/audio/dead (online-audio-converter.com).ogg"
       ],
       "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Coin",
+      "urls": ["assets/audio/Coin 2.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Jump1",
+      "urls": ["assets/audio/Jump.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Stomp",
+      "urls": ["assets/audio/Stomp.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "ded",
+      "urls": ["assets/audio/Die.wav"],
+      "autoDecode": true
     }
   ],
   "start": [
@@ -484,7 +508,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1511878566837",
+    "generated": "1513698525879",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

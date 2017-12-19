@@ -74,6 +74,9 @@ Level.prototype.create = function() {
 	 this.music.loop =  true;
 	 this.music.play();
 	this.boom = this.add.sound("bowshot1",0.5);
+	this.jump = this.add.sound("Jump1",0.5);
+	this.coin = this.add.sound("Coin",0.5);
+	this.stomp = this.add.sound("Stomp",0.5);
 	
 };
 
@@ -94,6 +97,7 @@ Level.prototype.onPlayerCollide = function(player,enamies){
 
 
 Level.prototype.onPlayerKilled = function(){
+	
 	this.music.stop();
 	this.game.state.start("Gameover");
 		
@@ -135,12 +139,13 @@ Level.prototype.update = function() {
 			
 		}
 		this.player.doNothing = false;
-			if (this.cursors.up.isDown) {
+			if (this.cursors.up.isDown ) {
 				if(this.player.body.onFloor()){
 		      this.player.body.velocity.y = -650;
 		      this.player.play("Jump");
-		      this.player.doNothing = false;
-		    }
+		     this.player.doNothing = false;
+		     this.jump.play();
+		   }
 			}
 			
 			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
@@ -160,6 +165,7 @@ Level.prototype.update = function() {
 			}
 			
 			Level.prototype.onCollide = function(enemies,bullet){
+				
 				enemies.kill();
 				bullet.kill();
 				this.game.score+=100;
@@ -168,13 +174,14 @@ Level.prototype.update = function() {
 				exp.anchor.set(0.5);
 				exp.scale.set(0.05);
 				exp.animations.add("all",null,12,false).play().killOnComplete=true;
-				this.boom.play();
+				this.stomp.play();
 			}
 			Level.prototype.collectCoin  = function (player, enemies2) {
 				enemies2.destroy();
 			    this.game.score++;
 			    this.scoreText.text = 'Score :'+this.game.score;
 			    this.addScoreText(enemies2);
+			    this.coin.play();
 			    return true;
 			  }
 };
@@ -301,7 +308,7 @@ Level.prototype.addpole = function(x, y) {
 Level.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(2,"arch",1);
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon1.trackSprite(this.player,-50,-60);
+	this.weapon1.trackSprite(this.player,100,-20);
 	this.weapon1.bulletSpeed = 2000;
 	this.weapon1.fireAngle = -2;
 	this.weapon1.rate = 600;
@@ -329,5 +336,6 @@ Level.prototype.Next = function(player,goal){
 }
 
 Level.prototype.quitGame = function() {
+	   this.music.stop();
 		this.game.state.start("Menu");
 };

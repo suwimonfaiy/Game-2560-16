@@ -64,7 +64,7 @@ Menu.prototype.startLevel = function(){
 	this.music = this.add.sound("button",0.5);
 	this.music.play();
 	this.music1.stop();
-	this.game.state.start("Level");
+	this.game.state.start("level2");
 	};
 
 	Menu.prototype.startstory = function(){

@@ -26,6 +26,7 @@ winner.prototype.create = function() {
 	
 };
 winner.prototype.backmenu = function() {
-	this.game.state.start("Menu");
 	this.musicStory.stop();
+	this.game.state.start("Menu");
+	
 };

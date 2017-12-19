@@ -15,7 +15,6 @@ Gameover.prototype.preload = function() {
 Gameover.prototype.create = function() {
 	this.musicStory = this.add.sound("dead1",0.5);
 	this.musicStory .play();
-	
 	this.bg = this.game.add.sprite(0, 0, "gameover1");
 	this.bg.width = this.game.width;
 	this.bg.height = this.game.height;
