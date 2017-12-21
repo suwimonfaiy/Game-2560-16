@@ -425,6 +425,30 @@
       "key": "start",
       "url": "assets/images/statgame.png",
       "overwrite": false
+    },
+    {
+      "type": "audio",
+      "key": "natural",
+      "urls": ["assets/audio/natural.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "excite",
+      "urls": ["assets/audio/excite.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "Dubstep",
+      "urls": ["assets/audio/Dubstep.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "image",
+      "key": "arrow2",
+      "url": "assets/images/arrow2.png",
+      "overwrite": false
     }
   ],
   "start": [
@@ -519,14 +543,28 @@
       "autoDecode": true
     }
   ],
-  "preload": [{
-    "type": "image",
-    "key": "loading",
-    "url": "assets/images/loading.png",
-    "overwrite": false
-  }],
+  "preload": [
+    {
+      "type": "image",
+      "key": "loading",
+      "url": "assets/images/loading.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "loading1",
+      "url": "assets/images/loading2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "loading2",
+      "url": "assets/images/loading6.png",
+      "overwrite": false
+    }
+  ],
   "meta": {
-    "generated": "1513707206027",
+    "generated": "1513790773857",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

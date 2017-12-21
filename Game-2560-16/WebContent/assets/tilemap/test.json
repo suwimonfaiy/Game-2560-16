@@ -156,8 +156,8 @@
                  "type":"enemy1",
                  "visible":true,
                  "width":64,
-                 "x":704,
-                 "y":628
+                 "x":640,
+                 "y":640
                 }, 
                 {
                  "gid":83,
@@ -734,6 +734,42 @@
                  "width":64,
                  "x":3968,
                  "y":960
+                }, 
+                {
+                 "gid":105,
+                 "height":64,
+                 "id":140,
+                 "name":" e",
+                 "rotation":0,
+                 "type":"enemy5",
+                 "visible":true,
+                 "width":64,
+                 "x":760,
+                 "y":644
+                }, 
+                {
+                 "gid":105,
+                 "height":64,
+                 "id":141,
+                 "name":"e",
+                 "rotation":0,
+                 "type":"enemy5",
+                 "visible":true,
+                 "width":64,
+                 "x":1776,
+                 "y":620
+                }, 
+                {
+                 "gid":105,
+                 "height":64,
+                 "id":142,
+                 "name":"e",
+                 "rotation":0,
+                 "type":"enemy5",
+                 "visible":true,
+                 "width":64,
+                 "x":1544,
+                 "y":716
                 }],
          "offsetx":12,
          "offsety":-20,
@@ -743,7 +779,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":140,
+ "nextobjectid":144,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.0.3",

@@ -29,6 +29,7 @@ Level.prototype.create = function() {
 	this.goal = this.add.group();
 	this.enemies2 = this.add.group();
 	this.enemies3 = this.add.group();
+	this.enemies4 = this.add.group();
 	for (x in this.map.objects.object) {
 		var obj = this.map.objects.object[x];
 		if (obj.type == "player") {
@@ -40,22 +41,32 @@ Level.prototype.create = function() {
 		} else if (obj.type == "enemy1") {
 			var c = this.addenemy1(obj.x, obj.y);
 			this.enemies.add(c);
+			c.play("walk");
 		} else if (obj.type == "enemy2") {
 			var c = this.addcoin(obj.x, obj.y);
 			this.enemies2.add(c);
 		}else if (obj.type == "enemy3") {
 			var c = this.addwitch(obj.x, obj.y);
 			this.enemies.add(c);
+			
 		}else if (obj.type == "goal") {
 			var c = this.addpole(obj.x, obj.y);
 			this.goal.add(c);
-		
+			
 		}else if (obj.type == "enemy4") {
 			var c = this.addwater(obj.x, obj.y);
 			this.enemies3.add(c);
 		
+		}else if (obj.type == "enemy5") {
+			var c = this.addenemy1(obj.x, obj.y);
+			this.enemies4.add(c);
+			c.play("idle");
 		}
 	}
+	 var twn = this.add.tween(this.enemies);
+	 twn.to({x : 80}, 6000, "Linear", true, 0, Number.MAX_VALUE, false);
+	 var twn = this.add.tween(this.enemies4);
+	 twn.to({x : -50}, 8000, "Linear", true, 0, Number.MAX_VALUE, false);	
 	 this.createWeapon();
 	 this.player.maxHealth = 3;
 	 this.player.setHealth(1);
@@ -93,7 +104,16 @@ Level.prototype.onPlayerCollide = function(player,enamies){
 	return true;
 };
 
-
+Level.prototype.onPlayerCollide1 = function(player,enamies4){
+	player.damage(1);
+	enamies4.kill();
+	player.canhit = false;
+	player.alpha = 0.1;
+   var tw = this.add.tween(player);
+	tw.to({alpha:1},200, "Linear",true,0,5);
+	tw.onComplete.addOnce(function(){this.alpha=1;this.canhit=true;}, player);
+	return true;
+};
 
 
 Level.prototype.onPlayerKilled = function(){
@@ -110,16 +130,18 @@ Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemies, this.maplayer);
 	this.game.physics.arcade.collide(this.enemies2, this.maplayer);
 	this.game.physics.arcade.collide(this.enemies3, this.maplayer);
+	this.game.physics.arcade.collide(this.enemies4, this.maplayer);
 	this.game.physics.arcade.collide(this.goal, this.maplayer);
 	this.physics.arcade.collide(this.player,this.enemies,this.onPlayerCollide,null,this);
 	this.physics.arcade.collide(this.player,this.enemies3,this.onPlayerKilled,null,this);
+	this.physics.arcade.collide(this.player,this.enemies4,this.onPlayerCollide1,null,this);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	this.game.physics.arcade.overlap(this.player, this.enemies2, this.collectCoin, null, this);
 	this.game.debug.text("Time : " + this.game.time.events.duration/1000, 50, 50);
 	
 	if (this.cursors.left.isDown) {
 			
-			this.player.body.acceleration.x = -200;
+			this.player.body.velocity.x = -200;
 			this.player.play("Walk");
 			this.player.scale.x = -1;
 			this.player.doNothing = false;
@@ -149,19 +171,28 @@ Level.prototype.update = function() {
 			}
 			
 			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-				this.player.play("Attack");
-				 this.fireWeapon();
-				 this.boom.play();
+				if(this.player.scale.x = 1){
+					this.player.play("Attack");
+					this.fireWeapon();
+					this.boom.play();
+				}else if(this.player.scale.x = -1) {
+						//this.player.play("Attack");
+						this.fireWeapon1();
+						this.boom.play();
+				}
+				
 				 }
 			this.enemies.forEachAlive(function(a){
 				if(a.y > this.world.height) a.y = -Math.random() * 300;
 	},this);
+			this.enemies4.forEachAlive(function(a){
+				if(a.y > this.world.height) a.y = -Math.random() * 300;
+	},this);
 			this.physics.arcade.collide(this.enemies,this.weapon1.bullets,this.onCollide,null,this);
-			this.physics.arcade.collide(this.enemies,this.weapon.bullets,this.onCollide,null,this);
-			
+			this.physics.arcade.collide(this.enemies4,this.weapon1.bullets,this.onCollide1,null,this);
 			if(this.player.canhit){
 				 this.physics.arcade.collide(this.enemies,this.player,this.onPlayerCollide,null,this);
-				 
+				 this.physics.arcade.collide(this.enemies4,this.player,this.onPlayerCollide1,null,this);
 			}
 			
 			Level.prototype.onCollide = function(enemies,bullet){
@@ -171,6 +202,18 @@ Level.prototype.update = function() {
 				this.game.score+=100;
 				this.scoreText.text = 'Score :'+this.game.score;
 				exp = this.add.sprite(enemies.x, enemies.y,"boom");
+				exp.anchor.set(0.5);
+				exp.scale.set(0.05);
+				exp.animations.add("all",null,12,false).play().killOnComplete=true;
+				this.stomp.play();
+			}
+Level.prototype.onCollide1 = function(enemies4,bullet){
+				
+				enemies4.kill();
+				bullet.kill();
+				this.game.score+=100;
+				this.scoreText.text = 'Score :'+this.game.score;
+				exp = this.add.sprite(enemies4.x, enemies4.y,"boom");
 				exp.anchor.set(0.5);
 				exp.scale.set(0.05);
 				exp.animations.add("all",null,12,false).play().killOnComplete=true;
@@ -223,7 +266,7 @@ Level.prototype.addwitch = function(x, y) {
 	c.animations.add("Run", gframes("run", 10), 12, true);
 	c.animations.add("Walk", gframes("walk", 10), 12, true);
 	c.animations.add("Dead", gframes("witch", 10), 12, true);
-	c.play("Walk");
+	c.play("Run");
 	c.scale.set(0.5);
 	c.anchor.set(0,0.9);
 	this.game.physics.enable(c);
@@ -252,12 +295,13 @@ Level.prototype.addenemy1 = function(x, y) {
 	c.animations.add("spikey", gframe("enemySpikey", 10), 4, true);
 	c.animations.add("swim", gframe("enemySwimming", 10), 4, true);
 	c.animations.add("walk", gframe("enemyWalking", 10), 4, true);
-	c.play("walk");
 	c.anchor.set(0,0.9);
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;
 	return c;
 };
+
+
 Level.prototype.adddead = function(x, y) {
 	var c = this.add.sprite(x, y, "jame2");
 	c.animations.add("jamedead", gframes("jamedead", 10), 12, true);
@@ -306,28 +350,30 @@ Level.prototype.addpole = function(x, y) {
 
 
 Level.prototype.createWeapon = function() {
-	this.weapon1 = this.add.weapon(2,"arch",1);
+
+	this.weapon1 = this.add.weapon(1,"arrow2",1);
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
 	this.weapon1.trackSprite(this.player,100,-20);
-	this.weapon1.bulletSpeed = 2000;
+	this.weapon1.bulletSpeed = 1500;
 	this.weapon1.fireAngle = -2;
-	this.weapon1.rate = 600;
+	this.weapon1.rate = 50;
 	
-	this.weapon = this.add.weapon(2,"arch",1);
+	this.weapon = this.add.weapon(1,"arrow2",1);
 	this.weapon.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon.trackSprite(this.player,-50,60);
+	this.weapon.trackSprite(this.player,-100,-20);
 	this.weapon.bulletSpeed = 2000;
-	this.weapon.fireAngle = 0;
-	this.weapon.rate = 600;
+	this.weapon.fireAngle = 182;
+	this.weapon.rate = 100;
 
 };
 Level.prototype.fireWeapon = function(){
 	 this.weapon1.fire();
-	// this.weapon.fire();
-		
 	
 };
-
+Level.prototype.fireWeapon1 = function(){
+	 this.weapon.fire();
+	
+};
 
 Level.prototype.Next = function(player,goal){ 
 	this.music.stop();
