@@ -145,48 +145,6 @@
       "spacing": 0
     },
     {
-      "type": "audio",
-      "key": "POL-smiley-island-short",
-      "urls": ["assets/audio/POL-smiley-island-short.wav"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "Win",
-      "urls": ["assets/audio/Win.wav"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "bowshot",
-      "urls": ["assets/audio/bowshot.wav"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "dead1",
-      "urls": ["assets/audio/dead.wav"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "POL",
-      "urls": ["assets/audio/POL-smiley-island-short (online-audio-converter.com).mp3"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "Win",
-      "urls": ["assets/audio/Win (online-audio-converter.com).mp3"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "dead ",
-      "urls": ["assets/audio/dead (online-audio-converter.com).mp3"],
-      "autoDecode": true
-    },
-    {
       "type": "image",
       "key": "arrow",
       "url": "assets/images/arrow.png",
@@ -354,19 +312,13 @@
     {
       "type": "audio",
       "key": "pol1",
-      "urls": [
-        "assets/audio/POL-smiley-island-short (online-audio-converter.com).mp3",
-        "assets/audio/POL-smiley-island-short (online-audio-converter.com).ogg"
-      ],
+      "urls": ["assets/audio/POL-smiley-island-short (online-audio-converter.com).ogg"],
       "autoDecode": true
     },
     {
       "type": "audio",
       "key": "win1",
-      "urls": [
-        "assets/audio/Win (online-audio-converter.com).ogg",
-        "assets/audio/Win (online-audio-converter.com).mp3"
-      ],
+      "urls": ["assets/audio/Win (online-audio-converter.com).ogg"],
       "autoDecode": true
     },
     {
@@ -378,34 +330,25 @@
     {
       "type": "audio",
       "key": "dead1",
-      "urls": [
-        "assets/audio/dead (online-audio-converter.com).mp3",
-        "assets/audio/dead (online-audio-converter.com).ogg"
-      ],
+      "urls": ["assets/audio/dead (online-audio-converter.com).ogg"],
       "autoDecode": true
     },
     {
       "type": "audio",
       "key": "Coin",
-      "urls": ["assets/audio/Coin 2.wav"],
+      "urls": ["assets/audio/Coin-2.ogg"],
       "autoDecode": true
     },
     {
       "type": "audio",
       "key": "Jump1",
-      "urls": ["assets/audio/Jump.wav"],
+      "urls": ["assets/audio/Jump.ogg"],
       "autoDecode": true
     },
     {
       "type": "audio",
       "key": "Stomp",
-      "urls": ["assets/audio/Stomp.wav"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "ded",
-      "urls": ["assets/audio/Die.wav"],
+      "urls": ["assets/audio/Stomp.ogg"],
       "autoDecode": true
     },
     {
@@ -564,7 +507,7 @@
     }
   ],
   "meta": {
-    "generated": "1513790773857",
+    "generated": "1513849775533",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
