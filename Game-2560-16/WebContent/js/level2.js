@@ -64,7 +64,7 @@ level2.prototype.create = function() {
 	var twn = this.add.tween(this.enemies4);
 	twn.to({x : -50}, 8000, "Linear", true, 0, Number.MAX_VALUE, false);
 	var twn = this.add.tween(this.enemies2);
-	twn.to({x : 100}, 8000, "Linear", true, 0, Number.MAX_VALUE, false);
+	twn.to({x : 50}, 8000, "Linear", true, 0, Number.MAX_VALUE, false);
 	 this.createWeapon();
 	 this.scoreText = this.add.text(this.game.camera.width/2.5, 0, 'Score :'+this.game.score, { font: '50px Arial',fill: 'white' });
 	 this.scoreText.fixedToCamera = true;
@@ -84,9 +84,7 @@ level2.prototype.create = function() {
 	 this.jump = this.add.sound("Jump1",0.5);
 	 this.coin = this.add.sound("Coin",0.5);
 	 this.stomp = this.add.sound("Stomp",0.5);
-	 this.enemies2.maxHealth = 6;
-	 this.enemies2.setHeath(5); 
-
+	
 	 
 };
 
@@ -104,8 +102,7 @@ level2.prototype.onPlayerCollide = function(player,enamies){
 };
 
 level2.prototype.onPlayerCollide1 = function(player,enamies2){
-	
-	enamies2.damage(5);
+	enamies2.damage(1);
 	player.kill();
 	enamies2.canhit = false;
 	enamies2.alpha = 0.1;
@@ -184,11 +181,9 @@ level2.prototype.update = function() {
 				 this.fireWeapon();
 				 }
 			this.enemies.forEachAlive(function(a){
-				if(a.y > this.world.height) a.y = -Math.random() * 300;
-	},this);
+				if(a.y > this.world.height) a.y = -Math.random() * 300;	},this);
 			this.enemies4.forEachAlive(function(a){
-				if(a.y > this.world.height) a.y = -Math.random() * 300;
-	},this);
+				if(a.y > this.world.height) a.y = -Math.random() * 300;	},this);
 			
 			this.physics.arcade.collide(this.enemies,this.weapon1.bullets,this.onCollide,null,this);
 			this.physics.arcade.collide(this.enemies2,this.weapon1.bullets,this.onCollide2,null,this);
@@ -225,8 +220,11 @@ level2.prototype.update = function() {
 				this.stomp.play();
 			}
 			level2.prototype.onCollide2 = function(enemies2,bullet){
-				enemies2.kill(); 
+				enemies2.damage(3); 
 				bullet.kill();
+				if(enemies2.health <= 3){
+					enemies2.isDie = true;
+				}
 				this.game.score+=100;
 				this.scoreText.text = 'Score :'+this.game.score;
 				exp = this.add.sprite(enemies2.x, enemies2.y,"boom");
@@ -272,6 +270,8 @@ level2.prototype.addwitch = function(x, y) {
 	c.anchor.set(0,0.9);
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;
+	c.maxHealth = 40;
+	c.setHealth(c.maxHealth); 
 	return c;
 };
 
@@ -298,10 +298,10 @@ level2.prototype.addenemy1 = function(x, y) {
 	c.animations.add("spikey", gframe("enemySpikey", 10), 4, true);
 	c.animations.add("swim", gframe("enemySwimming", 10), 4, true);
 	c.animations.add("walk", gframe("enemyWalking", 10), 4, true);
-	
 	c.anchor.set(0,0.9);
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;
+	
 	return c;
 };
 level2.prototype.adddead = function(x, y) {
@@ -358,5 +358,6 @@ level2.prototype.createWeapon = function() {
 level2.prototype.fireWeapon = function(){
 	 this.weapon1.fire();
 	
-	
 };
+
+
