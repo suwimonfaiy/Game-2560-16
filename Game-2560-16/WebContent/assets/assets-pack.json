@@ -1,29 +1,6 @@
 {
   "level": [
     {
-      "type": "image",
-      "key": "mono",
-      "url": "assets/images/mono.png",
-      "overwrite": false
-    },
-    {
-      "type": "tilemap",
-      "key": "tilemap",
-      "format": "CSV"
-    },
-    {
-      "type": "tilemap",
-      "key": "lab7.1",
-      "url": "assets/tilemap/lab7.1.json",
-      "format": "TILED_JSON"
-    },
-    {
-      "type": "tilemap",
-      "key": "lab7",
-      "url": "assets/tilemap/lab7.json",
-      "format": "TILED_JSON"
-    },
-    {
       "type": "spritesheet",
       "key": "titlesett",
       "url": "assets/tilemap/titleset.png",
@@ -34,36 +11,11 @@
       "spacing": 0
     },
     {
-      "type": "image",
-      "key": "bg",
-      "url": "assets/tilemap/background.png",
-      "overwrite": false
-    },
-    {
       "type": "atlas",
       "key": "dead",
       "textureURL": "assets/atlas/dead.png",
       "atlasURL": "assets/atlas/dead.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "atlas",
-      "key": "jame",
-      "textureURL": "assets/atlas/jame.png",
-      "atlasURL": "assets/atlas/jame.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "image",
-      "key": "3",
-      "url": "assets/images/3.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "bo",
-      "url": "assets/images/platformer_background_1.png",
-      "overwrite": false
     },
     {
       "type": "image",
@@ -82,24 +34,6 @@
       "spacing": 0
     },
     {
-      "type": "tilemap",
-      "key": "game2",
-      "url": "assets/tilemap/game2.json",
-      "format": "TILED_JSON"
-    },
-    {
-      "type": "tilemap",
-      "key": "game",
-      "url": "assets/tilemap/game.json",
-      "format": "TILED_JSON"
-    },
-    {
-      "type": "tilemap",
-      "key": "game4",
-      "url": "assets/tilemap/game4.json",
-      "format": "TILED_JSON"
-    },
-    {
       "type": "spritesheet",
       "key": "st",
       "url": "assets/tilemap/tilesheet_complete.png",
@@ -108,12 +42,6 @@
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
-    },
-    {
-      "type": "tilemap",
-      "key": "ggame",
-      "url": "assets/tilemap/ggame.json",
-      "format": "TILED_JSON"
     },
     {
       "type": "tilemap",
@@ -146,26 +74,8 @@
     },
     {
       "type": "image",
-      "key": "arrow",
-      "url": "assets/images/arrow.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "arch",
-      "url": "assets/images/arch.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
       "key": "boom",
       "url": "assets/images/comic-boom-explosion-2-4.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "gameover",
-      "url": "assets/images/gameover.png",
       "overwrite": false
     },
     {
@@ -189,13 +99,6 @@
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
-    },
-    {
-      "type": "atlas",
-      "key": "jame2",
-      "textureURL": "assets/atlas/jame2.png",
-      "atlasURL": "assets/atlas/jame2.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
     },
     {
       "type": "atlas",
@@ -274,12 +177,6 @@
       "type": "image",
       "key": "how",
       "url": "assets/images/howtoplay.jpg",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "Story0",
-      "url": "assets/images/0.png",
       "overwrite": false
     },
     {
@@ -397,24 +294,6 @@
   "start": [
     {
       "type": "image",
-      "key": "tap-to-start",
-      "url": "assets/images/tap-to-start.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "bgg",
-      "url": "assets/images/menu.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "name",
-      "url": "assets/images/jamerun2.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
       "key": "startt",
       "url": "assets/images/start.png",
       "overwrite": false
@@ -423,12 +302,6 @@
       "type": "image",
       "key": "about",
       "url": "assets/images/about.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "exit",
-      "url": "assets/images/exit.png",
       "overwrite": false
     },
     {
@@ -451,20 +324,8 @@
     },
     {
       "type": "image",
-      "key": "cave",
-      "url": "assets/images/Travel-Cave-icon.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
       "key": "jam",
       "url": "assets/images/jam.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "jam2",
-      "url": "assets/images/jam2.png",
       "overwrite": false
     },
     {
@@ -507,7 +368,7 @@
     }
   ],
   "meta": {
-    "generated": "1513849775533",
+    "generated": "1513850171338",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
